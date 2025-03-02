@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Properties
+{% endblock %}
+
+<!-- <ul>
+  {% for property in properties %}
+      <li>
+          <h2>{{ property.title }}</h2>
+          <img src="{{ property.image }}" alt="{{ property.title }}">
+      </li>
+  {% endfor %}
+</ul> -->
+<!-- {% for propertie in properties %}
+<p>{{propertie.title}}</p>
+<p>{{propertie.image}}</p>
+{% endfor %} -->
+
+{% block content %}
+<section class="properties">
+  <h1>Our Properties</h1>
+  <div class="grid">
+    {% for property in properties %}
+    <div class="grid-card">
+      <img class="property-img" src="/static/images/villa1.jpg" alt="Property Image">
+      <div class="info">
+        <span class="title">{{ property.title }}</span>
+        <a href="">More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'main/base.html'%}
+{% load static %}
+{% block title %}
+Contact
+{% endblock %}
+{% block img %}
+<img class="bg-img" src=" {% static 'images/email.jpg' %}" alt="">
+{% endblock %}
+{% block content %}
+<section class="contact">
+  <div class="left">
+    <h1>Contact Us</h1>
+    <div class="tel">
+      <span>Telephone:</span>
+      <a href="tel:96657263883764">+966 57263883764</a>
+    </div>
+    <div class="email">
+      <span>Email:</span>
+      <a href="mailto:info@realeastate">info@realeastate</a>
+    </div>
+    <div class="address">
+      <span>Address</span>
+      <span>Anas bin malik, Riyadh</span>
+      <span>Building W-112</span>
+      <span>Saudi arabia</span>
+    </div>
+  </div>
+  <div class="right">
+    <iframe src="https://www.google.com/maps/embed?pb=..." ></iframe>
+  </div>
+  
+</section>
+{% endblock %}

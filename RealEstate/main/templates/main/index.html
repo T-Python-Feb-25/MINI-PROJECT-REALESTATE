@@ -1,11 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>index</title>
-</head>
-<body>
-  
-</body>
-</html>
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block img %}
+<img class="bg-img" src=" {% static 'images/skyscraper.jpeg' %}" alt="">
+{% endblock %}
+
+{% block content %}
+<section>
+  <h1>Find Your Dreams</h1>
+  <p>laudantium tenetur quo facilis magnam aut numquam molestiae at officiis dolorum ea, cum optio quia eos eaque consequatur veniam.</p>
+  <a class="home-btn" href="#">Expolore Properties</a>
+</section>
+<div class="controls">
+  <div class="control green">
+    <span class="material-symbols-outlined green">
+      house
+      </span>
+    <span>All</span>
+  </div>
+  <div class="control brown">
+    <span class="material-symbols-outlined brown">
+      factory
+      </span>
+    <span>Properties</span>
+  </div>
+  <div class="control pink">
+    <span class="material-symbols-outlined pink">
+      hotel
+      </span>
+    <span>Hotel</span>
+  </div>
+  <div class="control blue">
+    <span class="material-symbols-outlined blue">
+      villa
+      </span>
+    <span>Villa</span>
+  </div>
+</div>
+{% endblock %}
+
