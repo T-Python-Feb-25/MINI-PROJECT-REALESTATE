@@ -1,4 +1,4 @@
-# LAB-DJANGO-COOKIES
+# MINI-PROJECT-REALESTATE
 
 ## Create a website for a real estate agency (RealEstate) , the website should have a home page that looks like the image below , you should :
 - use templates & templates inheritance
@@ -33,7 +33,7 @@
 <img width="100%"  src="resources/screenshots/screen-properties.png?raw=true">
 
 ### Contact Us Page `contact/`
-<img width="100%"  src="hresources/screenshots/screen-contact.png?raw=true">
+<img width="100%"  src="resources/screenshots/screen-contact.png?raw=true">
 
 ### A screen recording walktrhough of the final result
 <img width="100%"  src="screenrecord.gif?raw=true">
