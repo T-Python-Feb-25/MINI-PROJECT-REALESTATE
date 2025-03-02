@@ -2,25 +2,49 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial
--scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{% block title %} {% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../static/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
 <body>
+    <main>
 <nav class="nav">
-    <div class="nav_name"></div>
+    <div class="nav_left">
     <h2>HOME</h2>
-    <div class="nav_link"></div>
+</div>
+    <div class="nav_center">
     <a href="">Home</a>
     <a href="">Properites</a>
     <a href="">Service</a>
     <a href="">About</a>
     <a href="">Contact</a>
-    <div class="nav_sign in"></div>
+</div>
+    <div class="nav_right">
+        
+        <a href=""><span class="material-symbols-outlined">
+            person
+            </span></a>
+            <a href="">sign up</a>
+    <a href=""><span class="material-symbols-outlined">
+        light_mode
+        </span></a>
+   <a href=""><span class="material-symbols-outlined">
+        dark_mode
+        </span></a>
+    </div>
 
 
 </nav>
+
 {% block content %}
 {% endblock %}
+
+<footer>
+    <p>Real Estate International. All Rights Reserved. 2024</p>
+</footer>
 </body>
 </html>
