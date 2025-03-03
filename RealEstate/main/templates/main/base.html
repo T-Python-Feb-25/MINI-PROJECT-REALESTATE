@@ -1,3 +1,4 @@
+{%load static%}
 <!doctype html>
 <html lang="en">
 <head>
@@ -10,18 +11,18 @@
 <link rel="stylesheet" href="../../static/css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 </head>
-<body>
+<body class="{% block body_class %}{% endblock %}">
     <main>
 <nav class="nav">
     <div class="nav_left">
     <h2>HOME</h2>
 </div>
     <div class="nav_center">
-    <a href="">Home</a>
-    <a href="">Properites</a>
+    <a href="{%url 'main:home_view'%}">Home</a>
+    <a href="{%url 'main:properties_view'%}">Properites</a>
     <a href="">Service</a>
     <a href="">About</a>
-    <a href="">Contact</a>
+    <a href="{%url 'main:contact_view'%}">Contact</a>
 </div>
     <div class="nav_right">
         
@@ -39,9 +40,11 @@
 
 
 </nav>
+<main>
 
 {% block content %}
 {% endblock %}
+<main>
 
 <footer>
     <p>Real Estate International. All Rights Reserved. 2024</p>

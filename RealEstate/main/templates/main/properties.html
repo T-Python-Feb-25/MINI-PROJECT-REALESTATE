@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{%load static%}
+{% block title %}
+properties
+{% endblock %}
+{% block content %}
+<section class="properties">
+    <h2>OUR PROPERTIRS</h2>
+    <div class="grid__container">
+       {%for x in properties %}
+        <div class="card">
+            <img src="../../static/images/{{x.image}}" alt="">
+            <p>{{x.title}}</p>
+            <button>more</button>
+        </div>
+       {% endfor %}
+       
+
+        </div>
+       
+        </div>
+    
+</div>
+</section>
+{%endblock %}
