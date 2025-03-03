@@ -5,10 +5,23 @@
 {% block content %}
 <section class="contact">
     <h2>CONTACT US</h2>
-    <p>TELEPHONE: <a href="tel:+9665726883764">+966 5726883764</a></p>
-    <p>EMAIL: <a href="mailto:info@realestate.com">info@realestate.com</a></p>
-    <p>ADDRESS: Saudi Arabia</p>
-    <iframe src="https://www.google.com/maps/embed?..." width="600" height="450"></iframe>
+    <div class="contact-container">
+        <!-- ✅ المعلومات على اليسار -->
+        <div class="contact-info">
+            <p><strong>TELEPHONE:</strong> <a href="tel:+9665726883764">+966 5726883764</a></p>
+            <p><strong>EMAIL:</strong> <a href="mailto:info@realestate.com">info@realestate.com</a></p>
+            <p><strong>ADDRESS:</strong> Saudi Arabia</p>
+        </div>
+
+        <!-- ✅ الخريطة على اليمين -->
+        <div class="contact-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.597085776725!2d46.7156703!3d24.7742656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f04f5d8a5b53b%3A0x5e2f7e5e8d0a9b12!2sSaudi%20Arabia!5e0!3m2!1sen!2ssa!4v1641040189344!5m2!1sen!2ssa"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
 </section>
+
 {% endblock %}
 

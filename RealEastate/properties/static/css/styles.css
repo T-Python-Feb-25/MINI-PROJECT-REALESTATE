@@ -290,3 +290,70 @@ nav ul li a:hover {
     color: black !important; 
     text-shadow: none; 
 }
+
+
+
+.contact-container {
+    display: flex;
+    justify-content: space-between; /* توزيع المحتوى بشكل متساوٍ */
+    align-items: center; /* محاذاة العناصر في نفس المستوى */
+    max-width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* خلفية خفيفة */
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* لضمان التناسق على الشاشات الصغيرة */
+}
+
+/* ✅ قسم المعلومات (النصوص) */
+.contact-info {
+    flex: 1; /* يأخذ مساحة متساوية */
+    text-align: left;
+    font-size: 18px;
+    color: #333;
+    padding-right: 20px; /* مسافة بين النص والخريطة */
+}
+
+/* ✅ تحسين الروابط */
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* ✅ قسم الخريطة */
+.contact-map {
+    flex: 1; /* يأخذ مساحة متساوية */
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-map iframe {
+    width: 100%;
+    max-width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ تحسين العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .contact-map {
+        justify-content: center;
+    }
+}
