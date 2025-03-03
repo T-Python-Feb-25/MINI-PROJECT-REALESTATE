@@ -14,36 +14,38 @@ Home
 {% endblock %}
 
 {% block content %}
-<section class ="home-sec {% if "mode" in request.COOKIES %} home-dark {% endif %}" >
-  <a href="/"><h1 class="home-h">Find Your Dreams</h1></a>
-  <p>laudantium tenetur quo facilis magnam aut numquam molestiae at officiis dolorum ea, cum optio quia eos eaque consequatur veniam.</p>
+<section class="home-sec {% if " mode" in request.COOKIES %} home-dark {% endif %}">
+  <a href="/">
+    <h1 class="home-h">Find Your Dreams</h1>
+  </a>
+  <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our
+    catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
   <a class="home-btn" href="{% url 'main:properties'%}">Expolore Properties</a>
 </section>
 <div class="controls {% if 'mode' in request.COOKIES %} dark-controls {% endif %}">
   <div class="control green">
     <span class="material-symbols-outlined green">
       house
-      </span>
+    </span>
     <span>All</span>
   </div>
   <div class="control brown">
     <span class="material-symbols-outlined brown">
       factory
-      </span>
+    </span>
     <span>Properties</span>
   </div>
   <div class="control pink">
     <span class="material-symbols-outlined pink">
       hotel
-      </span>
+    </span>
     <span>Hotel</span>
   </div>
   <div class="control blue">
     <span class="material-symbols-outlined blue">
       villa
-      </span>
+    </span>
     <span>Villa</span>
   </div>
 </div>
 {% endblock %}
-
