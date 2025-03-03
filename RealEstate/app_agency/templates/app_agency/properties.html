@@ -1,0 +1,44 @@
+{% extends "app_agency/base.html" %}
+
+{% load static %}
+{% block title %}Properties - RealEstate{% endblock %}
+
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+{% block content %}
+ 
+<h1>Properties</h1>
+<div class="properties-gallery">
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa1.jpg' %}" alt="Villa Modern in Malqa" />
+            <h2>Villa in Malqa</h2>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa2.jpg' %}" alt="great home in rimal" />
+            <h3>Villa in Malqa</h3>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa3.jpg' %}" alt="luxury villa in riyadh" />
+            <h4>Luxury villa in Riyadh</h4>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa4.jpg' %}" alt="elegant villa in jeddah" />
+            <h3>Elegant villa in Jeddah</h3>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
