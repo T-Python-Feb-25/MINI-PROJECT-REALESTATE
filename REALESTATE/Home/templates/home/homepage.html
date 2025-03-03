@@ -1,0 +1,42 @@
+{% extends 'Home/base.html' %}
+
+{% block extra_css %}
+    <link href="/static/css/homepage.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+Home page
+{%endblock%}
+
+{% block content%}
+
+<div class="content">
+    <h1 class="intro">Find your<br>dreams</h1>
+<p class="paragrph">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our<br>catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+<a href="{% url 'Home:properties_view' %}" class="bt">Explore Properties</a>
+
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-item">
+            <span class="material-symbols-outlined">house</span>
+            <p>ALL</p>
+        </div>
+        <div class="footer-item">
+            <span class="material-symbols-outlined">factory</span>
+            <p>PROPERTIES</p>
+        </div>
+        <div class="footer-item">
+            <span class="material-symbols-outlined">hotel</span>
+            <p>HOTEL</p>
+        </div>
+        <div class="footer-item">
+            <span class="material-symbols-outlined">villa</span>
+            <p>VILLA</p>
+        </div>
+    </div>
+</footer>
+
+
+{% endblock %}
