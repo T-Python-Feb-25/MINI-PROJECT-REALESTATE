@@ -1,0 +1,71 @@
+{% extends 'main/base.html' %}
+{% block body_class %}no-bg{% endblock %}
+{% load static %}
+{% block content%}
+
+
+   <div class="text-prop">
+     <h2>OUR PROPERTIES</h2>
+   </div>
+   
+   <section class="properties">
+    
+      <div class="properties-card">
+        <img src="{% static 'images/villa1.jpg'%}"  />
+        <h1>
+          {{properties.0.title}}
+        </h1>
+        <div class="btn-container">
+          <button class="btn-pro">More</button>
+          </div>
+
+
+      </div></div>
+
+      <div class="properties-card">
+        <img src="{% static 'images/villa2.jpg'%}"  />
+        <h1>
+          {{properties.1.title}}
+        </h1>
+        <div class="btn-container">
+          <button class="btn-pro">More</button>
+          </div>
+
+      </div></div>
+
+      <div class="properties-card">
+        <img src="{% static 'images/villa3.jpg'%}"  />
+        <h1>
+          {{properties.2.title}}
+        </h1>
+        <div class="btn-container">
+          <button class="btn-pro">More</button>
+          </div>
+
+      </div></div>
+
+      <div class="properties-card">
+        <img src="{% static 'images/villa4.jpg'%}"  />
+        <h1>
+          {{properties.3.title}}
+        </h1>
+        <div class="btn-container">
+          <button class="btn-pro">More</button>
+          </div>
+
+
+      </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+   </section>
+
+{% endblock %}
