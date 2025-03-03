@@ -1,3 +1,19 @@
+/* Light mode styles */
+body.light-mode {
+    background-image: url('static/resources/skyscraper.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-image: url('static/resources/skyscraper-dark.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
 /* Container for logo, nav, and sign-up button */
 .header-container {
     display: flex;
@@ -76,6 +92,7 @@ nav:hover {
 .moving-text {
     text-transform: uppercase;
     font-size: 2rem; /* Increase the font size */
+    margin-left: 30px;
 }
 
 /* Style for the h1 element */
@@ -94,6 +111,7 @@ nav:hover {
     color: #000000;   /* Set the text color */
     font-size: 1.2rem; /* Set the font size */
     margin-top: 10px; /* Adjust the top margin */
+    margin-left: 7%;
 }
 
 /* Style for the button element */
@@ -107,6 +125,12 @@ nav:hover {
     transition: background-color 0.3s ease; /* Smooth transition for background color */
     border-radius: 20px;
     width: fit-content;
+    margin-left: 7%;
+    margin-top: 20%;
+}
+
+.home h1{
+    font-size: 5.5rem;
 }
 
 /* Style for the buttons container */
@@ -138,4 +162,42 @@ nav:hover {
 .signup:hover {
     color: red; /* Change text color on hover */
     transform: scale(1.1);
+}
+
+/* Style for the mode-toggle button */
+.mode-toggle {
+    display: flex;
+    align-items: center;
+    background-color: transparent; /* Transparent background */
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin-left: 10px; /* Add some space between buttons */
+}
+
+/* Material icon in mode-toggle button */
+.mode-toggle .material-icons {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover effect for the mode-toggle button */
+.mode-toggle:hover {
+    color: red; /* Change text color on hover */
+    transform: scale(1.1);
+}
+
+.contact-body body{
+    background-color: #333;
+}
+.c-title{
+    margin-left: 95px; /* Add some space to the right of the logo */
+}
+
+.contact-info{
+    margin-left: 95px; /* Add some space to the right of the logo */
+    list-style-type: none;   /* Remove bullet points from the list */
+    margin: 95px 20;
+    padding: 0;
 }

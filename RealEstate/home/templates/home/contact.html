@@ -1,0 +1,53 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Leaflet.js CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    
+<style>
+    #map {
+        height: 500px; /* Set height for the map */
+        width: 100%;   /* Set the width of the map */
+    }
+</style>
+<!-- Map container -->
+<div id="map"></div>
+
+<!-- Leaflet.js JavaScript -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+    // Create the map instance
+    var map = L.map('map').setView([51.505, -0.09], 13); // Example coordinates (London)
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    // Add a marker at the center
+    L.marker([51.505, -0.09]).addTo(map)
+        .bindPopup('A sample marker!')
+        .openPopup();
+</script>
+<body style="background-image: url('static/resources/email.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;">
+    <div class="container mt-5">
+        <h3 class="c-title">Contact Us</h3>
+        <ul class="contact-info">
+            <li>Telephone: <span class="phone">+966 57263883764</span></li>
+            <li>Email: <span class="email"> info@realestate.com</span></li>
+            <li>Address: <span class="address" style="text-transform: uppercase">
+                <br>Anas bin malik, Riyadh,<br>
+                 building w-112<br>
+                 Saudi Arabia<br>
+            </span></li>
+        </ul>
+    </div>
+</body>
+
+
+{% endblock %}

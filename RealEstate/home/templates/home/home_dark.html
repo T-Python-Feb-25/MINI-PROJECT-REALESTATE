@@ -2,8 +2,10 @@
 {% load static %}
 
 {% block content %}
-
 <style>
+    body{
+        background-image: url('static/resources/skyscraper-dark.jpeg');
+    }
     .moving-text {
         font-size: 1rem; /* Start with a smaller font size */
         position: relative;
@@ -11,7 +13,7 @@
     }
 
     @keyframes moveText {
-        0% {
+        20% {
             transform: translateX(-100%) scale(0.5); /* Start offscreen to the left and smaller */
             opacity: 0; /* Start with no opacity */
         }
@@ -25,9 +27,6 @@
         }
     }
 </style>
-{% block body %}
-<body style="background-image: url('static/resources/skyscraper-dark.jpeg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
-{% endblock %}
 
 <section class="home">
     <div class="container mt-5">
@@ -35,6 +34,7 @@
         <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our<br>
             catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
         <btn class="explore">Explore Properties</btn>
+        <h3>testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</h3>
     </div>
 </section>
 {% endblock %}

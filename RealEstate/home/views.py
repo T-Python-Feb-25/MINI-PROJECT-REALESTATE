@@ -6,3 +6,6 @@ def home(request):
 
 def home_dark(request):
     return render(request, 'home/home_dark.html')
+
+def contact(request):
+    return render(request, 'home/contact.html')
