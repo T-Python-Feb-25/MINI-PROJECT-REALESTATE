@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+{% block title %}
+Homepage
+{% endblock %}
+{% block body_class %}home{% endblock %}
+
+{% block content %}
+<main class="main_home">
+<section class="home_center">
+    <div class="left">
+    <h1 class="animated-text"><a id="animated-text" href="">FIND YOUR DREAMS</a></h1>
+    <p>Our catlog will suprise you. Rather, discover an unprecendented offers of luxry properires our catlog will surprise you. Rather, discover an unprecendented offers of luxry properties</p>
+    <form action="{%url 'main:properties_view'%}">
+        <button>Explore properties</button>
+    </form>
+    
+</div>
+<div class="right"></div>
+</section>
+<section class="home_bottom">
+    <a class="home_bottom_house" href=""><span class="material-symbols-outlined">
+        house
+        </span><div>all</div></a>
+        <a class="home_bottom_properties" href=""><span class="material-symbols-outlined">
+            factory
+            </span><div>PROPERTIES</div></a>
+    <a class="home_bottom_hotel" href=""><span class="material-symbols-outlined">
+        hotel
+        </span><div>HOTEL</div></a>
+   
+        <a class="home_bottom_villa" href=""><span class="material-symbols-outlined">
+            villa
+            </span><div>VILLA</div></a>
+</section>
+</main>
+{% endblock %}
