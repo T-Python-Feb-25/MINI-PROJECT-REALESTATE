@@ -1,0 +1,52 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block img %}
+{% if 'mode' in request.COOKIES %}
+<img class="im" src="{% static 'images\skyscraper-dark.jpg' %}" alt="">
+{% else %}
+<img class="im" src="{% static 'images\skyscraper.jpeg' %}" alt="">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="home" {% if 'mode' in request.COKKIES %} home-dark {% endif %}>
+    <a href="/">
+        <h1 class="home-click"> Find your Dreams</h1>
+    </a>
+    <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our
+        catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+    <a href="{% url 'main:properties' %}" class="button">Expolore Properties</a>
+</section>
+
+
+<div class="icons {% if 'mode' in request.COOKIES %} dark-icons {% endif %}">
+<div class="icon green">
+    <span class="material-symbols-outlined">
+        home
+        </span>
+        <span>ALL</span>
+</div>
+<div class="icon brown">
+    <span class="material-symbols-outlined">
+        factory
+        </span>
+        <span>Properties</span>
+</div>
+<div class="icon pink">
+    <span class="material-symbols-outlined">
+        hotel
+        </span>
+        <span>Hotel</span>
+</div>
+<div class="icon blue">
+    <span class="material-symbols-outlined">
+        villa
+        </span>
+        <span>Villa</span>
+</div>
+{% endblock %}

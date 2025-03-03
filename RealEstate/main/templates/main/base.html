@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body {%if 'mode' in request.COOKIES %} class="body-dark" {% endif %}>
+    <main>
+        {% block img %}
+
+        {% endblock %}
+    <header>
+        <h1 class="logo {% if 'mode' in request.COKKIES %} logo-dark {% endif %}">HOME</h1>
+        <nav {% if 'mode' in request.COOKIES %} class="dark"{% endif %}>
+            <a href="{% url 'main:main' %}"> Home </a>
+            <a href="{% url 'main:properties' %}"> Properties </a>
+            <a href=""> Services </a>
+            <a href=""> About </a>
+            <a href="{% url 'main:contact'%}"> Contact </a>
+        </nav>
+        <div class="box {% if 'mode' in request.COKKIES%} box-dark {% endif %}">
+            <div class="log">
+                <span class="material-symbols-outlined">
+                    person
+                    </span>
+                    <span>Sign up</span>
+            </div>
+            <div class = "mode"> 
+                <a href="{% url 'main:light_view' %}">
+                <span class="material-symbols-outlined {% if 'mode' not in request.COKKIES %} active light {% endif %}">
+                    light_mode
+                    </span>
+                </a>
+                <a href="{% url 'main:dark_view' %}">
+                    <span class="material-symbols-outlined {% if 'mode' in request.COKKIES %} active dark {% endif %} ">
+                        dark_mode
+                        </span>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+        {% block content %}
+
+        {% endblock %}
+    </main>
+</body>
+</html>
