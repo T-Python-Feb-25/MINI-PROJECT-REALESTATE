@@ -1,0 +1,23 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Properties
+{% endblock %}
+
+{% block content %}
+<section class="Properties" >
+    <h1 class="propertie-h {% if 'mode' in request.COKKIES %} propertie-h-dark {% endif %}"> Our Properties </h1>
+    <div class="homes">
+        {% for propertie in properties  %}
+        <div class="homes-v" > 
+            <img class="propertie-img" src="{% static 'images/' %}{{propertie.image}}" alt="not found">
+            <div class="info">
+                <span class="title" > {{propertie.title}} </span>
+                <a href="">More</a>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+</section>
+{% endblock %}
