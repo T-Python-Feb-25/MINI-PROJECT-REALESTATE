@@ -123,6 +123,7 @@ html.dark .nav_center {
     flex-basis: auto;
     margin: 2rem 7rem;
     width: 46%;
+    flex-grow: 1;
     
 
 }
@@ -174,6 +175,12 @@ footer{
       transform: scale(1);
     }
   }
+.main_home{
+    display: flex;
+    flex-direction: column;
+    min-height: 84vh;
+}
+
 .home_bottom{
     justify-content: center;
     background-color: white;
@@ -187,7 +194,6 @@ footer{
     margin: 0 auto;
     display: flex;
     gap: 3rem;
-    margin-top: 6rem;
     
 }
 html.dark .home_bottom{
@@ -295,6 +301,11 @@ html.dark .home_bottom a div{
     padding: 0.2rem 1.4rem;
     border-style: none;
 
+}
+.properties_main{
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
 }
 body.contact{
     background-image:url(../images/email.jpg) ;
