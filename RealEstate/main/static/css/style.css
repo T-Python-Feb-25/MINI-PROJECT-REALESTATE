@@ -325,22 +325,35 @@ body.contact{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding-top: 3rem;
+    padding-right: 2rem;
 }
 .contact_main_right iframe{
     border-radius: 2vh;
-    width: 90vh;
-    height: 60vh;
+    width: 52vw;
+    height: 50vh;
 
 }
 .contact_main_left{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    font-size: 1.3rem;
+
 
 }
 .contact_main_left h2{
     margin-bottom: 2rem;
+    font-weight: 500;
 }
+.contact_main_left p strong{
+    font-weight: 450;
+    font-size: 1.2rem;
+}
+.contact_main_left p a{
+    color: blue;
+}
+
 .form_button{
     display: flex;
     margin-top: 1rem;
