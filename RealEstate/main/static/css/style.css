@@ -255,7 +255,13 @@ html.dark .home_bottom a div{
     display: flex;
     margin: 2rem 8rem;
     flex-direction: column;
+    min-height: 82vh;
     
+}
+properties_main{
+    display: flex;
+    flex-direction: column;
+
 }
 .card{
     display: flex;
@@ -302,11 +308,7 @@ html.dark .home_bottom a div{
     border-style: none;
 
 }
-.properties_main{
-    display: flex;
-    flex-direction: column;
-    min-height: 80vh;
-}
+
 body.contact{
     background-image:url(../images/email.jpg) ;
     background-repeat: no-repeat;
@@ -316,10 +318,9 @@ body.contact{
 }
 .contact_main{
     margin: 2rem 8rem;
+    min-height: 80vh;
 }
-.contact_main{
-    margin: 2rem 8rem;
-}
+
 .contact_main_flex{
     display: flex;
     justify-content: space-between;
