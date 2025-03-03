@@ -1,0 +1,33 @@
+{% extends "app_agency/base.html" %}
+
+{% load static %}
+{% block title %}Contact - RealEstate{% endblock %}
+
+<link href="{% static 'css/style.css' %}" rel="stylesheet" />
+
+{% block content %}
+
+<h1>Contact</h1>
+
+<p class="contact-info">Email: 
+    <a href="mailto:example@example.com">example@example.com</a>
+</p>
+
+<p class="contact-info">Phone: 
+    <a href="tel:+966572638837">+966 57 263 8837</a>
+</p>
+
+<p class="contact-info">Address:</p>
+<p class="contact-info">Anas Bin Malik</p>
+<p class="contact-info">Building W-112</p>
+<p class="contact-info">Saudi Arabia</p>
+
+<h2>Location</h2>
+<iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.669739494197!2d46.67529541500223!3d24.774265984094526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f038fdb64ff3d%3A0x8f1bb51b9e3e2c2b!2sAnas%20Bin%20Malik%20Rd%2C%20Riyadh%20Saudi%20Arabia!5e0!3m2!1sen!2ssa!4v1644527897890!5m2!1sen!2ssa" 
+    class="map-iframe" 
+    allowfullscreen 
+    loading="lazy">
+</iframe>
+
+{% endblock %}
