@@ -1,0 +1,36 @@
+
+{% extends 'main/base.html'%}
+{% load static %}
+{% block content%}
+<section class ="properties">
+    <h2>OUR PROPERTIES</h2>
+        <div class="properties2">
+
+            <div class="card">
+                <img src="{%static 'images/villa1.jpg'%}"/>
+                <h4>Villa Modern in Malqa</h4>
+                <button class="btn">more</button>
+            </div>
+            <div class="card">
+                <img src="{%static 'images/villa2.jpg'%}"/>
+                <h4>Great home for you in Rimal</h4>
+                <button class="btn">more</button>
+            </div>
+            <div class="card">
+                <img src="{%static 'images/villa3.jpg'%}"/>
+                <h4>Villa with 8 bedrooms in Swedey</h4>
+                <button class="btn">more</button>
+
+            </div>
+
+            <div class="card">
+                <img src="{%static 'images/villa4.jpg'%}"/>
+                <h4>Amazing Villa in Hitten</h4>
+                <button class="btn">more</button>
+            </div>
+        </div>
+
+</section>
+
+{% endblock%}
+

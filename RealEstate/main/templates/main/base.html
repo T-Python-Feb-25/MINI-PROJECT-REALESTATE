@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/style.css" rel="stylesheet"/>
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="{{body_class }}">
+    <div class="wrapper">
+        <nav>
+            <strong class="logo">Home</strong>
+            <div class="mid-nav">
+                <a href="{% url 'main:index_view'%}">Home</a>
+                <a href="{% url 'main:properties'%}">properties</a>
+                <a href="{% url 'main:index_view'%}">Services</a>
+                <a href="{% url 'main:index_view'%}">about</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div class ="right-nav">
+                <a href ="{% url 'main:index_view'%}"><img src="{%static 'images/person_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg'%}"></img></a>
+                <a href ="{% url 'main:index_view'%}">sign up</a>
+                <a href ="{% url 'main:light_mode'%}"><img src="{%static 'images/light_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg'%}" ></img></a>
+                <a href ="{% url 'main:dark_mode'%}"><img src="{%static 'images/dark_mode_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg'%}"></img></a>
+
+
+
+            </div>
+        </nav>
+    </div>
+    <main>
+
+        {% block content %}
+
+        {%endblock%}
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
