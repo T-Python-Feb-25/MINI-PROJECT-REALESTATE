@@ -1,0 +1,132 @@
+body {
+    background-image: url("../img/skyscraper.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+     padding-bottom: 80px;
+}
+
+
+
+
+
+html.dark body {
+    background-image: url("../img/skyscraper-dark.jpg");
+    color: white;
+
+}
+
+html.dark .footer-container {
+    background: black;
+    color: white;
+
+}
+
+
+html.dark .paragrph {
+
+    color: white;
+
+}
+
+
+
+.intro{
+
+    font-family: 'Phudu', cursive;
+    font-weight: 600;
+    text-align: left;
+    font-size: 9rem;
+    padding: 0.1rem 3rem;
+
+     opacity: 0;
+    transform: translateY(50px);
+    animation: fadeSlideUp 1.5s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.paragrph {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+    margin-top: 20px;
+    line-height: 1.5;
+}
+
+.bt {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.bt:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /*background: white;*/
+    /*padding: 15px 0;*/
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    gap: 40px;
+    padding: 10px 20px;
+    background: white;
+    border-radius: 30px;
+}
+
+.footer-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-item .material-symbols-outlined {
+    font-size: 30px;
+}
+
+.footer-item p {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+
+@media (max-width: 1024px) {
+    .intro {
+        font-size: 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        font-size: 4rem;
+    }
+}
+
+

@@ -1,0 +1,81 @@
+
+.baar{
+        text-align: center;
+        display: flex;
+        gap: 30px;
+}
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+html.dark .home{
+    color: white;
+}
+
+.icons-container{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+}
+
+.material-symbols-outlined {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+
+.navbar {
+    background: white;
+    padding: 10px 20px;
+    /*text-align: center;*/
+    border-radius: 50px;
+    display: flex;
+    flex: 1;
+
+}
+
+html.dark .navbar {
+    background: black;
+
+}
+
+html.dark .navbar a{
+        color: white;
+
+
+}
+.navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: all 0.5s ease-out;
+    flex: 1;
+
+}
+
+.navbar a:hover {
+    transform: scale(1.3);
+    margin-right: 30px;
+    margin-left: 26px;
+}
+
+.icons-container .active-icon{
+    background-color: white;
+    border-radius: 50%;
+    padding: 6px;
+}
+
+
+
+
+
+
+

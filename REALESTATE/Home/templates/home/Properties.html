@@ -1,0 +1,28 @@
+{% extends 'Home/base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link href="/static/css/Prop.css" rel="stylesheet">
+{% endblock %}
+
+{% block title %}
+properties page
+{%endblock%}
+
+{% block content%}
+
+<h1 class="prop">Our Properties </h1>
+
+<div class="container">
+    {% for property in properties %}
+    <div class="elements">
+        <img src="{% static 'img/' %}{{ property.image }}">
+        <p>{{ property.title }}</p>
+        <a href="" class="bt">MORE</a>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+{%endblock%}

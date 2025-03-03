@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" {% if mode == "dark" %} class="dark" {% endif %}>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <link href="/static/css/base.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+        {% block extra_css %}{% endblock %}
+    <title>{% block title %}{%endblock%}</title>
+</head>
+<body>
+<div class="header">
+
+   <a href="{% url 'Home:home_view' %}" class="home"  style="color:black; font-family: 'Phudu', cursive;
+    text-decoration: none; font-size: 55px; font-weight: 600 ;" >Home</a>
+
+
+<div class="baar">
+
+    <nav class="navbar">
+        <a href="{% url 'Home:home_view' %}">Home</a>
+        <a href="{% url 'Home:properties_view' %}">Properties </a>
+        <a href="{% url 'Home:Services_view' %}">Services</a>
+        <a href="{% url 'Home:About_view' %}">About</a>
+        <a href="{% url 'Home:contact_view' %}">Contact</a>
+    </nav>
+
+    <div class="icons-container">
+        <span class="material-symbols-outlined">person</span>
+        <div>sign up</div>
+
+            <div class="icon">
+                <a href="{% url 'Home:dark_mode_view' %}">
+                    <span class="material-symbols-outlined {% if mode == 'dark' %}active-icon{% endif %}">dark_mode</span>
+                </a>
+
+                <a href="{% url 'Home:light_mode_view' %}">
+                    <span class="material-symbols-outlined {% if mode == 'light' %}active-icon{% endif %}">light_mode</span>
+                </a>
+            </div>
+
+
+</div>
+
+    </div></div>
+
+<main class="container">
+    {% block content%}
+
+    {% endblock %}
+</main>
+
+</body>
+</html>

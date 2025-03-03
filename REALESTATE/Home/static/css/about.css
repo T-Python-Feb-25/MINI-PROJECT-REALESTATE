@@ -1,0 +1,10 @@
+.abo{
+    color: pink;
+}
+
+body{
+    background-color: #ccc6c4;
+}
+html.dark body{
+    background-color: #3A3B3C;
+}
