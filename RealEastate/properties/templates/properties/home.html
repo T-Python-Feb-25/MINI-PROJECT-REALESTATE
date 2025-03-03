@@ -1,0 +1,20 @@
+{% extends 'properties/base.html' %}
+
+{% block title %}Home - RealEstate{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h2 class ="hidden">FIND YOUR DREAMS</h2>
+    <p class="hidden">Our catalog will surprise you. Discover an unprecedented selection of luxury properties.</p>
+    
+    <a href="{% url 'properties' %}" class="explore-btn hidden">Explore Properties</a>
+
+</section>
+
+<div class="categories">
+    <button class="active">ALL</button>
+    <button>PROPERTIES</button>
+    <button>HOTEL</button>
+    <button>VILLA</button>
+</div>
+{% endblock %}
