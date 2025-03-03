@@ -1,6 +1,6 @@
 {%load static%}
 <!doctype html>
-<html lang="en">
+<html lang="en" {%if 'screen' in request.COOKIES %} class="dark" {%endif%}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,7 @@
     <main>
 <nav class="nav">
     <div class="nav_left">
-    <h2>HOME</h2>
+    <a href="{%url 'main:home_view'%}">HOME</a>
 </div>
     <div class="nav_center">
     <a href="{%url 'main:home_view'%}">Home</a>
@@ -30,10 +30,10 @@
             person
             </span></a>
             <a href="">sign up</a>
-    <a href=""><span class="material-symbols-outlined">
+    <a href="{%url 'main:light_mode'%}"><span class="material-symbols-outlined">
         light_mode
         </span></a>
-   <a href=""><span class="material-symbols-outlined">
+   <a href="{%url 'main:drak_mode'%}"><span class="material-symbols-outlined">
         dark_mode
         </span></a>
     </div>

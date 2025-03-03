@@ -18,6 +18,19 @@ body.home{
     height: 56vh;
 
 }
+html.dark body{
+
+    background-color: rgba(0, 0, 0, 0.7) ;
+    color: white;
+
+}
+html.dark body.home{
+    background-image:url(../images/skyscraper-dark.jpg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 56vh;
+}
 
 .nav{
     margin-top: 2rem;
@@ -28,6 +41,25 @@ body.home{
     justify-content: space-evenly;
     flex-wrap: wrap;
     
+}
+a {
+    transition: color 0.5s ease 0.3s, font-size 0.5s ease 0.3s;
+}
+
+.nav a:hover {
+    color: red !important;
+    font-size: 1.2rem;
+}
+a:hover{
+    font-size: 1.2rem;
+
+}
+html.dark a:hover{
+    color: white !important;
+    font-size: 1rem;
+}
+html.dark a {
+    transition: none;
 }
 .nav_right
 {
@@ -41,8 +73,7 @@ body.home{
 .nav_right a
 {
     text-decoration: none;
-    color: black
-    
+    color: inherit;
 
 }
 
@@ -55,15 +86,26 @@ body.home{
     align-items: center;
     flex-wrap: wrap;
 }
+html.dark .nav_center {
+    display: flex;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 2rem 6rem;
+    border-radius: 4rem;
+    gap: 4rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
 .nav_center a{
    text-decoration: none;
-   color: black;
+   color: inherit;
    font-weight: 400;
 }
-.nav_left h2{
+.nav_left a{
     font-weight: 500;
     font-size: 3rem;
+    text-decoration: none;
+    color: inherit;
     
 }
 .home_center{
@@ -106,7 +148,7 @@ footer{
 }
 .animated-text {
           
-    animation: textGrow 1s ease-in;
+    animation: textGrow 1s ;
   }
 
   @keyframes textGrow {
@@ -119,10 +161,10 @@ footer{
   }
 .home_bottom{
     justify-content: center;
-    background-color: rgba(252, 252, 252, 0.829);
+    background-color: white;
     background-position: center;
     text-align: center;
-    padding: 2rem 2rem;
+    padding: 2rem 10rem;
     border-radius: 5rem;
     align-items: center;
     align-content: center;
@@ -131,6 +173,14 @@ footer{
     display: flex;
     gap: 3rem;
     margin-top: 6rem;
+    
+}
+html.dark .home_bottom{
+    background-color:rgba(0, 0, 0, 0.7);;
+
+}
+html.dark .home_bottom a div{
+    color: white;
 }
 .home_bottom a{
     display: flex;
@@ -179,12 +229,12 @@ footer{
 .home_bottom_villa{
     color: #0091ffb0;  
 }
+
 .properties{
     display: flex;
     margin: 2rem 8rem;
     flex-direction: column;
     
-
 }
 .card{
     display: flex;
