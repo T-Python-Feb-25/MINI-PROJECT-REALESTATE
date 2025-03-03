@@ -1,0 +1,36 @@
+{% extends "home/base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    .moving-text {
+        font-size: 1rem; /* Start with a smaller font size */
+        position: relative;
+        animation: moveText 5s linear infinite;
+    }
+
+    @keyframes moveText {
+        0% {
+            transform: translateX(-100%) scale(0.5); /* Start offscreen to the left and smaller */
+            opacity: 0; /* Start with no opacity */
+        }
+        50% {
+            transform: translateX(0) scale(1); /* Move to the center and normal size */
+            opacity: 1; /* Full opacity */
+        }
+        100% {
+            transform: translateX(50%) scale(1.5); /* Move to the start of the navbar and bigger */
+            opacity: 0; /* End with no opacity */
+        }
+    }
+</style>
+
+<section class="home">
+    <div class="container mt-5">
+        <h1 class="moving-text">Find your <br>dreams</h1>
+        <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our<br>
+            catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <btn class="explore">Explore Properties</btn>
+    </div>
+</section>
+{% endblock %}

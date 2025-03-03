@@ -1,0 +1,83 @@
+{% load static %}  <!-- Load static files in Django template -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home page{% endblock %}</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/light_mode.css' %}">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body style="background-image: url('static/resources/skyscraper.jpeg'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+
+    <!-- Container for logo, navigation bar, and sign-up button -->
+    <div class="header-container">
+        <!-- Logo -->
+        <section class="logo-container">
+            <a href="#" class="logo">HOME</a>
+        </section>
+        <!-- Navigation bar -->
+        <nav class="navbar0">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="signup" id="light-mode-btn">
+                <span class="material-icons">wb_sunny</span> Light Mode
+            </button>
+            <button class="signup" id="dark-mode-btn">
+                <span class="material-icons">nights_stay</span> Dark Mode
+            </button>
+        </div>
+    </div>
+
+    <header>
+        <!-- Header content -->
+    </header>
+
+    <main>
+        <div class="container mt-5" id="content-container">
+            <!-- Content block -->
+            {% block content %}
+            <!-- Some content -->
+            {% endblock %}
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('light-mode-btn').addEventListener('click', function() {
+            fetch('{% url "home" %}')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content-container').innerHTML = data;
+                });
+        });
+
+        document.getElementById('dark-mode-btn').addEventListener('click', function() {
+            fetch('{% url "home_dark" %}')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content-container').innerHTML = data;
+                });
+        });
+    </script>
+
+</body>
+
+</html>
