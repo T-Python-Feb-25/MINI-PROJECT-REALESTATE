@@ -15,7 +15,7 @@
     <main>
 <nav class="nav">
     <div class="nav_left">
-    <a href="{%url 'main:home_view'%}">HOME</a>
+    <a id="home" href="{%url 'main:home_view'%}">HOME</a>
 </div>
     <div class="nav_center">
     <a href="{%url 'main:home_view'%}">Home</a>
@@ -30,10 +30,10 @@
             person
             </span></a>
             <a href="">sign up</a>
-    <a href="{%url 'main:light_mode'%}"><span class="material-symbols-outlined">
+    <a id="light_mode" href="{%url 'main:light_mode'%}"><span class="material-symbols-outlined">
         light_mode
         </span></a>
-   <a href="{%url 'main:drak_mode'%}"><span class="material-symbols-outlined">
+   <a id="dark_mode" href="{%url 'main:drak_mode'%}"><span class="material-symbols-outlined">
         dark_mode
         </span></a>
     </div>

@@ -29,7 +29,7 @@ html.dark body.home{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 56vh;
+    height:80vh;
 }
 
 .nav{
@@ -43,20 +43,28 @@ html.dark body.home{
     
 }
 a {
-    transition: color 0.5s ease 0.3s, font-size 0.5s ease 0.3s;
+    transition: color 0.2s ease 0.3s, font-size 0.5s ease 0.1s;
+    
 }
-
+#home:hover{
+    font-size: 3.2rem;
+}
 .nav a:hover {
     color: red !important;
     font-size: 1.2rem;
 }
-a:hover{
+.home_bottom a:hover{
     font-size: 1.2rem;
 
 }
+#animated-text{
+    text-decoration: none;
+    color: inherit;
+    border-style: none;
+}
 html.dark a:hover{
     color: white !important;
-    font-size: 1rem;
+    
 }
 html.dark a {
     transition: none;
@@ -134,6 +142,13 @@ html.dark .nav_center {
     color: white;
     border-radius: 2rem;
     padding: 0.5rem 2rem;
+    border-style: nones;
+    cursor: pointer;
+
+}
+button{
+    cursor: pointer;
+    
 }
 footer{
     display: flex;
@@ -216,7 +231,7 @@ html.dark .home_bottom a div{
     color: #a37a827b;  
 }
 .home_bottom_hotel .material-symbols-outlined{
-    background-color: #a72ca968; /
+    background-color: #a72ca968; 
 
 }
 .home_bottom_hotel{
@@ -239,14 +254,14 @@ html.dark .home_bottom a div{
 .card{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgb(75, 82, 91);
     border-radius: 20px;
-    background-color: #c8c4c4;
+    background-color: #d5d5d5;
     border-style: none;
-    width: 40vh;
-    height: 30vh;
+    width: 100%;
+    height: 300px;
     overflow: hidden;
-    gap: 0.4rem;
+    gap: 1rem;
+    color: black;
     
 
     
@@ -255,15 +270,15 @@ html.dark .home_bottom a div{
     object-fit: cover;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    width: 40vh;
-    height: 21vh;
+    width: 100%;
+    height: 220px;
     padding: 0;
     margin: 0;
 
 }
 .grid__container{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(40vh, 40vh));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1rem;
 
 }
@@ -278,6 +293,7 @@ html.dark .home_bottom a div{
     color: white;
     border-radius: 1rem;
     padding: 0.2rem 1.4rem;
+    border-style: none;
 
 }
 body.contact{
@@ -296,6 +312,7 @@ body.contact{
 .contact_main_flex{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .contact_main_right iframe{
     border-radius: 2vh;
@@ -320,4 +337,17 @@ body.contact{
     border-radius: 2rem;
     padding: 0.5rem 2rem;
 
+}
+html.dark #dark_mode{
+    background-color: black;
+    border-radius: 50%;
+}
+#light_mode{
+    background-color: white;
+    border-radius: 50%;
+
+}
+html.dark #light_mode{
+    background-color: transparent;
+    
 }
