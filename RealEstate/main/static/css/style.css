@@ -3,75 +3,214 @@
   padding: 0;
   margin: 0;
 }
+
 :root {
   --padding-l-r: 200px;
+  --dark-nav: #282828;
+  --dark-bg: #323232;
 }
+
 body {
-  font-family: "Phudu", serif;
+  /* font-family: "Phudu", serif; */
   background-color: rgb(236, 235, 234);
 }
+
+.body-dark {
+  background-color: var(--dark-bg);
+}
+
 a {
   text-decoration: none;
 }
+
 main {
-  height: 95vh;
+  min-height: 90vh;
   position: relative;
 }
-main .bg-img{
+
+main .bg-img {
   position: absolute;
   z-index: -1;
   height: 100%;
   width: 100%;
 }
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 120px var(--padding-l-r) 0;
+  position: sticky;
+  top: 1px;
+  z-index: 100;
 }
-header h2 {
+
+header h2.home {
   font-weight: 500;
   font-size: 50px;
+  cursor: pointer;
+
 }
+
+/* bug */
+header h2.home-dark {
+  color: white;
+}
+
+header h2:hover {
+
+  animation-name: color-ch;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes color-ch {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    color: red;
+    transform: scale(1.2);
+  }
+}
+
 header nav {
   display: flex;
+  align-items: center;
   gap: 30px;
   background-color: white;
   padding: 30px 100px;
   border-radius: 50px;
 }
+
+header nav.dark {
+  background-color: var(--dark-nav);
+}
+
+header nav.dark a {
+  color: white;
+}
+
 header nav a {
   color: black;
   font-weight: 400;
+  transition: 0.5s;
 }
+
+header nav a:hover {
+  color: red;
+  padding: 2px;
+}
+
 header .box {
   display: flex;
   gap: 10px;
 }
+
+header .box-dark .sign span,
+header .box-dark .page-mode a {
+  color: white;
+}
+
 header .box .sign {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
+
 header .box .page-mode {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
+
+.page-mode a {
+  color: black;
+
+}
+
+header .box .sign span,
+header .box .page-mode span {
+  transition: 0.3s;
+  cursor: pointer;
+
+}
+
+header .box .sign span:hover,
+header .box .page-mode span:hover {
+  color: red;
+}
+
+header .box .page-mode span.active {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header .box .page-mode span.active::before {
+  content: "";
+  position: absolute;
+  height: 120%;
+  width: 120%;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+header .box .page-mode span.active.dark::before {
+  background-color: black;
+  color: white;
+}
+
+header .box .page-mode span.active.light::before {
+  background-color: white;
+}
+
 /* Section */
 section {
   padding: 50px var(--padding-l-r) 0;
-  width:80%;
+  width: 80%;
+  margin-top: 10px;
 }
-section h1 {
-  font-size: 250px;
+
+section .home-h {
+  color: black;
+  font-size: 100px;
   margin-bottom: 20px;
+  position: relative;
+  animation-name: scale;
+  animation-duration: 2s;
 }
+
+@keyframes scale {
+  0% {
+    transform: scale(0) translateX(-150px);
+  }
+
+  100% {
+    transform: scale(1) translateX(0px);
+  }
+}
+
 section p {
   margin-bottom: 30px;
 }
+
+.home-sec.home-dark h1 {
+  color: white;
+}
+
+.home-sec.home-dark p {
+  color: white;
+}
+
 section .home-btn {
   display: inline-block;
   color: white;
@@ -79,6 +218,7 @@ section .home-btn {
   padding: 15px 40px;
   border-radius: 50px;
 }
+
 /* controls */
 .controls {
   display: flex;
@@ -93,12 +233,18 @@ section .home-btn {
   left: 50%;
   transform: translate(-50%, 50%);
 }
+
+.dark-controls {
+  background-color: var(--dark-nav);
+}
+
 .controls .control {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+
 }
+
 .controls .control span:first-child {
   position: relative;
   display: flex;
@@ -107,6 +253,7 @@ section .home-btn {
   margin-bottom: 12px;
   padding: 4px;
 }
+
 .controls .control span:first-child:before {
   content: "";
   position: absolute;
@@ -115,93 +262,142 @@ section .home-btn {
   border-radius: 50%;
   z-index: -1;
 }
+
 .controls .control.green {
   color: #35bb18;
 }
+
 .controls .control.green span:first-child:before {
   background: #c6eabf;
 }
+
 .controls .control.brown {
   color: #b8770d;
 }
+
 .controls .control.brown span:first-child:before {
   background: #e6cfae;
 }
+
 .controls .control.pink {
   color: #cd23c5;
 }
+
 .controls .control.pink span:first-child:before {
   background: #f1beed;
 }
+
 .controls .control.blue {
   color: #1c20c7;
 }
+
 .controls .control.blue span:first-child:before {
   background: #b8bcef;
 }
+
 /* Contact */
 .contact {
   width: 100%;
   display: flex;
 }
+
 .contact .left {
   width: 40%;
 }
+
 .contact .left h1 {
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 60px;
 }
+
 .contact .left .tel {
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
+
 .contact .left .email {
   font-weight: 500;
   font-size: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 
 }
+
 .contact .left .address {
   font-weight: 500;
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
+
 .contact .left .address span:first-child {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
+
 .contact .left .address span:not(:first-child) {
   font-size: 16px;
 }
+
 .contact .right {
   width: 60%;
 }
-.contact .right iframe{
+
+.contact .right iframe {
   width: 700px;
   height: 400px;
   border-radius: 15px;
 }
+
 /* properties */
-.properties h1 {
+.properties {
+  padding: 50px 50px 0 var(--padding-l-r);
+}
+
+.properties .property-h {
   font-size: 30px;
   font-weight: 500;
+  margin-bottom: 20px;
 }
+
+.properties .property-h.property-h-dark {
+  color: white;
+}
+
 .properties .grid {
   display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
+
 .properties .grid .grid-card {
-  background-color:#e2e1e1 ;
+  background-color: #e2e1e1;
   border-radius: 10px;
   overflow: hidden;
 }
+
 /*  */
 .properties .grid .property-img {
   width: 100%;
+  height: 200px;
 }
+
 .properties .grid .grid-card .info {
   padding: 10px;
+  font-weight: 500;
+}
 
+.properties .grid .grid-card .info a {
+  display: block;
+  width: 80px;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-top: 10px;
+  font-weight: normal;
+  font-size: 14px;
 }

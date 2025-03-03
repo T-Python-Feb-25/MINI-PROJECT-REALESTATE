@@ -10,20 +10,22 @@
 <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/style.css">
 </head>
-<body>
+<body {% if "mode" in request.COOKIES %} class="body-dark" {% endif %}>
   <main>
     {% block img %}
     {% endblock %}
     <header>
-      <h2 class="home">Home</h2>
-      <nav>
-        <a href="">Home</a>
-        <a href="">Properties</a>
+      <h2 class="home {% if "mode" in request.COOKIES %} home-dark {% endif %}" >Home</h2>
+      
+      <nav {% if "mode" in request.COOKIES %} class="dark" {% endif %}>
+        <a href="/">Home</a>
+        <a href="{% url 'main:properties'%}">Properties</a>
         <a href="">Services</a>
         <a href="">About</a>
-        <a href="">Contact</a>
+        <a href="{% url 'main:contact'%}">Contact</a>
       </nav>
-      <div class="box">
+      
+      <div class="box {% if 'mode' in request.COOKIES %} box-dark {% endif %}">
         <div class="sign">
           <span class="material-symbols-outlined">
             person
@@ -31,12 +33,16 @@
           <span>Sign up</span>
         </div>
         <div class="page-mode">
-          <span class="material-symbols-outlined">
+        <a href="{% url 'main:light_view' %}">
+          <span class="material-symbols-outlined {% if 'mode' not in request.COOKIES %} active light {% endif %}">
             sunny
-            </span>
-            <span class="material-symbols-outlined">
+          </span>
+        </a>
+          <a href="{% url 'main:dark_view' %}">
+            <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} active dark {% endif %}">
               dark_mode
               </span>
+          </a>
         </div>
       </div>
     </header>

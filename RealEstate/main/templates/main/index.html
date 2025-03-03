@@ -6,16 +6,20 @@ Home
 {% endblock %}
 
 {% block img %}
+{% if "mode" in request.COOKIES %}
+<img class="bg-img" src=" {% static 'images/skyscraper-dark.jpg' %}" alt="">
+{% else %}
 <img class="bg-img" src=" {% static 'images/skyscraper.jpeg' %}" alt="">
+{% endif %}
 {% endblock %}
 
 {% block content %}
-<section>
-  <h1>Find Your Dreams</h1>
+<section class ="home-sec {% if "mode" in request.COOKIES %} home-dark {% endif %}" >
+  <a href="/"><h1 class="home-h">Find Your Dreams</h1></a>
   <p>laudantium tenetur quo facilis magnam aut numquam molestiae at officiis dolorum ea, cum optio quia eos eaque consequatur veniam.</p>
-  <a class="home-btn" href="#">Expolore Properties</a>
+  <a class="home-btn" href="{% url 'main:properties'%}">Expolore Properties</a>
 </section>
-<div class="controls">
+<div class="controls {% if 'mode' in request.COOKIES %} dark-controls {% endif %}">
   <div class="control green">
     <span class="material-symbols-outlined green">
       house
