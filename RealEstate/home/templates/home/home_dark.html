@@ -1,29 +1,35 @@
-{% extends "home/base.html" %}
+{% extends "home/base_dark.html" %}
 {% load static %}
 
 {% block content %}
 <style>
-    body{
-        background-image: url('static/resources/skyscraper-dark.jpeg');
-    }
     .moving-text {
-        font-size: 1rem; /* Start with a smaller font size */
+        font-size: 1rem;
+        /* Start with a smaller font size */
         position: relative;
         animation: moveText 5s linear infinite;
     }
 
     @keyframes moveText {
-        20% {
-            transform: translateX(-100%) scale(0.5); /* Start offscreen to the left and smaller */
-            opacity: 0; /* Start with no opacity */
+        0% {
+            transform: translateX(8%) scale(1);
+            /* Start offscreen to the left and smaller */
+            opacity: 20;
+            /* Start with no opacity */
         }
+
         50% {
-            transform: translateX(0) scale(1); /* Move to the center and normal size */
-            opacity: 1; /* Full opacity */
+            transform: translateX(0) scale(1);
+            /* Move to the center and normal size */
+            opacity: 1;
+            /* Full opacity */
         }
+
         100% {
-            transform: translateX(50%) scale(1.5); /* Move to the start of the navbar and bigger */
-            opacity: 0; /* End with no opacity */
+            transform: translateX(40%) scale(1.5);
+            /* Move to the start of the navbar and bigger */
+            opacity: 0;
+            /* End with no opacity */
         }
     }
 </style>
@@ -34,7 +40,6 @@
         <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our<br>
             catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
         <btn class="explore">Explore Properties</btn>
-        <h3>testtttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt</h3>
     </div>
 </section>
 {% endblock %}

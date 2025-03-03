@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Home page{% endblock %}</title>
 
+    <!--JS-
+    <script src="script.js" defer></script>-->
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <!-- Google Fonts -->
@@ -18,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
-<body class="light-mode" style="background-image: url('static/resources/skyscraper.jpeg');">
+<body class="dark-mode">
 
     <!-- Container for logo, navigation bar, and sign-up button -->
     <div class="header-container">
@@ -62,21 +64,6 @@
             {% endblock %}
         </div>
     </main>
-
-    <script>
-        document.getElementById('light-mode').addEventListener('click', function() {
-            document.body.classList.remove('dark-mode');
-            document.body.classList.add('light-mode');
-            document.body.style.backgroundImage = "url('{% static 'resources/skyscraper.jpeg' %}')";
-        });
-
-        document.getElementById('dark-mode').addEventListener('click', function() {
-            document.body.classList.remove('light-mode');
-            document.body.classList.add('dark-mode');
-            document.body.style.backgroundImage = "url('{% static 'resources/skyscraper-dark.jpg' %}')";
-        });
-    </script>
-
 </body>
 
 </html>
