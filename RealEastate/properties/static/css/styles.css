@@ -295,27 +295,27 @@ nav ul li a:hover {
 
 .contact-container {
     display: flex;
-    justify-content: space-between; /* توزيع المحتوى بشكل متساوٍ */
-    align-items: center; /* محاذاة العناصر في نفس المستوى */
+    justify-content: space-between; 
+    align-items: center; 
     max-width: 80%;
     margin: 50px auto;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.8); /* خلفية خفيفة */
+    background: rgba(255, 255, 255, 0.8); 
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* لضمان التناسق على الشاشات الصغيرة */
+    flex-wrap: wrap; 
 }
 
-/* ✅ قسم المعلومات (النصوص) */
+
 .contact-info {
-    flex: 1; /* يأخذ مساحة متساوية */
+    flex: 1; 
     text-align: left;
     font-size: 18px;
     color: #333;
-    padding-right: 20px; /* مسافة بين النص والخريطة */
+    padding-right: 20px; 
 }
 
-/* ✅ تحسين الروابط */
+
 .contact-info a {
     color: #007bff;
     text-decoration: none;
@@ -325,9 +325,9 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* ✅ قسم الخريطة */
+
 .contact-map {
-    flex: 1; /* يأخذ مساحة متساوية */
+    flex: 1; 
     display: flex;
     justify-content: flex-end;
 }
@@ -340,7 +340,7 @@ nav ul li a:hover {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* ✅ تحسين العرض على الشاشات الصغيرة */
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column; 
@@ -356,4 +356,71 @@ nav ul li a:hover {
     .contact-map {
         justify-content: center;
     }
+}
+
+
+
+
+
+
+/* ✅ ضبط الـ Hero Section لمحاذاة النص لليسار */
+.hero {
+    text-align: left; /* جعل النص يبدأ من اليسار */
+    padding-left: 8%; /* إزاحة النص قليلاً نحو اليمين ليكون متناسقاً */
+    align-items: flex-start; /* محاذاة النص والعناصر لليسار */
+    justify-content: center;
+    height: 100vh;
+}
+
+/* ✅ ضبط حجم وخط العنوان */
+.hero h2 {
+    font-size: 60px; /* تكبير العنوان */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+/* ✅ تحسين الفقرة */
+.hero p {
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* ✅ تحسين زر Explore Properties */
+.explore-btn {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    background: black;
+    color: white;
+    border-radius: 25px;
+    transition: background 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background: #007bff;
+}
+
+
+
+
+
+
+
+.dark-mode .hero {
+    color: white; /* التأكد من أن النص يبقى واضحًا */
+}
+
+.dark-mode .explore-btn {
+    background: white;
+    color: black;
+}
+
+.dark-mode .explore-btn:hover {
+    background: #007bff;
+    color: white;
 }
