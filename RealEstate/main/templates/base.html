@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block page_title %}{% endblock %}</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Phudu:wght@300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body {% if "mode" in request.COOKIES %} class="dark-theme" {% endif %}>
+  <div class="wrapper">
+    {% block background_image %}
+    {% endblock %}
+    <section class="top-bar">
+      <h2 class="landing-title {% if 'mode' in request.COOKIES %} landing-dark {% endif %}">Home</h2>
+
+      <menu {% if "mode" in request.COOKIES %} class="menu-dark" {% endif %}>
+        <a href="/">Home</a>
+        <a href="{% url 'main:properties'%}">Properties</a>
+        <a href="">Services</a>
+        <a href="">About</a>
+        <a href="{% url 'main:contact'%}">Contact</a>
+      </menu>
+
+      <div class="user-panel {% if 'mode' in request.COOKIES %} panel-dark {% endif %}">
+        <div class="register">
+          <span class="material-symbols-outlined">account_circle</span>
+          <span>Sign up</span>
+        </div>
+        <div class="theme-toggle">
+          <a href="{% url 'main:light_view' %}">
+            <span class="material-symbols-outlined {% if 'mode' not in request.COOKIES %} selected bright {% endif %}">
+              light_mode
+            </span>
+          </a>
+          <a href="{% url 'main:dark_view' %}">
+            <span class="material-symbols-outlined {% if 'mode' in request.COOKIES %} selected shadow {% endif %}">
+              nightlight
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+    {% block main_content %}
+    {% endblock %}
+  </div>
+</body>
+
+</html>

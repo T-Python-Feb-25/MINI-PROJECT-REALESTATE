@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+Reach Out
+{% endblock %}
+
+{% block background_image %}
+<img class="wallpaper" src="{% static 'images/email.jpg' %}" alt="">
+{% endblock %}
+
+{% block main_content %}
+<article class="communication">
+  <div class="details">
+    <h1>Contact Us</h1>
+    <div class="phone">
+      <span>Phone:</span>
+      <a href="tel:96657263883764">+966 57263883764</a>
+    </div>
+    <div class="mail">
+      <span>Email:</span>
+      <a href="mailto:info@realeastate">info@realeastate</a>
+    </div>
+    <div class="location">
+      <span>Location</span>
+      <span>Anas bin Malik, Riyadh</span>
+      <span>Structure W-112</span>
+      <span>Saudi Arabia</span>
+    </div>
+  </div>
+  <div class="map-area">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39534.32047088791!2d46.69282503635445!3d24.858461973909737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbd2d9c324c7%3A0x9124f530f1b56443!2z2KfZg9in2K_ZitmF2YrYqSDYt9mI2YrZgg!5e0!3m2!1sar!2ssa!4v1740999884823!5m2!1sar!2ssa"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</article>
+{% endblock %}
