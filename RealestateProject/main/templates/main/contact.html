@@ -1,0 +1,25 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<link href="/static/css/style.css" rel="stylesheet" />
+{% block content %}
+<!--<nav>
+    <a href="{% url 'main:home' %}" class="nav-link">HOME</a>
+</nav> -->
+
+<h1>Contact Us</h1>
+
+<p class="contact-info">Email: <a href="mailto:example@example.com">example@example.com</a></p>
+<p class="contact-info">Phone: <a href="tel:+123456789">+123456789</a></p>
+
+
+
+<p class="contact-info">ADDRESS:</p>
+<p class="contact-info">ANAS BIN MALIK, RIYADH</p>
+<p class="contact-info">BUILDING W-112</p>
+<p class="contact-info">SAUDI ARABIA</p>
+
+<h2>Our Location</h2>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.657422301987!2d46.733257599999995!3d24.8413865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2efbf5ff605bad%3A0x1e61a8549cf8bcb4!2z2YjYp9is2YfYqSDYsdmI2LTZhiAtINmF2YbYt9mC2Kkg2KfZhNiq2LPZiNmC!5e0!3m2!1sar!2ssa!4v1741030445173!5m2!1sar!2ssa" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+{% endblock %}

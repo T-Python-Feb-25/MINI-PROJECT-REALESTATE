@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<section class="hero">
+    <button class="btn-home">HOME</button>
+    <h1>FIND YOUR<br>DREAMS</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecedented selection of luxury properties.</p>
+    <a href="{% url 'main:properties' %}" class="btn-explore">Explore Properties</a> 
+
+    <div class="property-filter">
+        <div class="filter-item">
+            <div class="filter-icon">
+                <span class="material-symbols-outlined">home</span>
+            </div>
+            <span class="filter-text">ALL</span>
+        </div>
+
+        <div class="filter-item">
+            <div class="filter-icon">
+                <span class="material-symbols-outlined">location_city</span>
+            </div>
+            <span class="filter-text">PROPERTIES</span>
+        </div>
+
+        <div class="filter-item">
+            <div class="filter-icon">
+                <span class="material-symbols-outlined">bed</span>
+            </div>
+            <span class="filter-text">HOTEL</span>
+        </div>
+
+        <div class="filter-item">
+            <div class="filter-icon">
+                <span class="material-symbols-outlined">villa</span>
+            </div>
+            <span class="filter-text">VILLA</span>
+        </div>
+    </div>
+</section>
+{% endblock %}
