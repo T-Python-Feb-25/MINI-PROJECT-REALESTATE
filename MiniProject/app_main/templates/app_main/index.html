@@ -1,0 +1,38 @@
+{% extends 'app_main/base.html' %}
+{% block title %}index{% endblock %}
+
+{% block content %}
+
+<style>
+body {
+    background-image: url('/static/img/skyscraper.jpeg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+</style>
+
+<main>
+    <section>
+        <div class="content">
+            <h1>FIND YOUR DREAM</h1>
+            <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+            <a href="/properties/">
+                <button>Explore Properties</button>
+            </a>
+        </div>
+    </section>
+</main>
+<section>
+    <div class="footer">
+        <a href="#">ALL</a>
+        <span class="material-symbols-outlined" >house</span>
+        <a href="#">PROPERTIES</a>
+        <span class="material-symbols-outlined">domain</span>
+        <a href="#">HOTEL</a>
+        <span class="material-symbols-outlined">hotel</span>
+        <a href="#">VILLA</a>
+        <span class="material-symbols-outlined">villa</span>       
+    </div>
+</section>
+{% endblock %}
