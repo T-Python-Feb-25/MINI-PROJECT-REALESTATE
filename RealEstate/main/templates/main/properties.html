@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Properties
+{% endblock %}
+
+{% block content %}
+<section class="properties">
+  <h1 class="property-h {% if 'mode' in request.COOKIES %} property-h-dark {% endif %}">Our Properties</h1>
+  <div class="grid">
+    {% for property in properties %}
+    <div class="grid-card">
+      <img class="property-img" src="{% static 'images/' %}{{ property.image }}" alt="Not Found">
+      <div class="info">
+        <span class="title">{{ property.title }}</span>
+        <a href="">More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}
