@@ -1,0 +1,51 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block img %}
+{% if "mode" in request.COOKIES %}
+<img class="bg-img" src=" {% static 'images/skyscraper-dark.jpg' %}" alt="">
+{% else %}
+<img class="bg-img" src=" {% static 'images/skyscraper.jpeg' %}" alt="">
+{% endif %}
+{% endblock %}
+
+{% block content %}
+<section class="home-sec {% if " mode" in request.COOKIES %} home-dark {% endif %}">
+  <a href="/">
+    <h1 class="home-h">Find Your Dreams</h1>
+  </a>
+  <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our
+    catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+  <a class="home-btn" href="{% url 'main:properties'%}">Expolore Properties</a>
+</section>
+<div class="controls {% if 'mode' in request.COOKIES %} dark-controls {% endif %}">
+  <div class="control green">
+    <span class="material-symbols-outlined green">
+      house
+    </span>
+    <span>All</span>
+  </div>
+  <div class="control brown">
+    <span class="material-symbols-outlined brown">
+      factory
+    </span>
+    <span>Properties</span>
+  </div>
+  <div class="control pink">
+    <span class="material-symbols-outlined pink">
+      hotel
+    </span>
+    <span>Hotel</span>
+  </div>
+  <div class="control blue">
+    <span class="material-symbols-outlined blue">
+      villa
+    </span>
+    <span>Villa</span>
+  </div>
+</div>
+{% endblock %}
