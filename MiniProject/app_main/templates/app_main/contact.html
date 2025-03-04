@@ -1,0 +1,40 @@
+{% extends 'app_main/base.html' %}
+{% block title %}content{% endblock %}
+{% load static %}
+{% block content %}
+
+<style>
+    body {
+        background-image: url('/static/img/email.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+</style>
+
+<main>
+    <div class="Contact-us">
+        <div class="details">
+            <strong>CONTACT US</strong>
+            <h4>TELEPHONE: <span class="underline">+99688732947</span></h4>
+            <h4>EMAIL: <span class="underline">example@example.com</span></h4>
+            <h4>ADDRESS:</h4>
+            <p>
+                ANAS BIN MALIK RIYADH<br>
+                BUILDING W 112<br>
+                SAUDI ARABIA
+            </p>
+        </div>
+        <section class="location">
+
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.45678901234!2d46.678123456789!3d24.789012345678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f123456789!2sAnas+Bin+Malik%2C+Riyadh%2C+Saudi+Arabia!5e0!3m2!1sen!2ssa!4v1234567890123"
+                    width="700px" height="360px" >
+                </iframe>
+            </div>
+        </section>
+    </div>
+</main>
+
+{% endblock %}
