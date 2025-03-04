@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+Properties
+{% endblock %}
+
+{% block main_content %}
+<article class="listings">
+  <h1 class="listing-title {% if 'mode' in request.COOKIES %} listing-dark {% endif %}">Our Properties</h1>
+  <div class="gallery">
+    {% for property in properties %}
+    <div class="gallery-item">
+      <img class="listing-photo" src="{% static 'images/' %}{{ property.image }}" alt="None">
+      <div class="description">
+        <span class="name">{{ property.title }}</span>
+        <a href="">More</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</article>
+{% endblock %}

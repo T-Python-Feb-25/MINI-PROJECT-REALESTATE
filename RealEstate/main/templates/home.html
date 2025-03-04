@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+Home Page
+{% endblock %}
+
+{% block background_image %}
+{% if "mode" in request.COOKIES %}
+<img class="wallpaper" src="{% static 'images/skyscraper-dark.jpg' %}" alt="">
+{% else %}
+<img class="wallpaper" src="{% static 'images/skyscraper.jpeg' %}" alt="">
+{% endif %}
+{% endblock %}
+
+{% block main_content %}
+<article class="intro-section {% if 'mode' in request.COOKIES %} intro-dark {% endif %}">
+  <a href="/">
+    <h1 class="intro-heading">Find Your Dreams</h1>
+  </a>
+  <p>Our catalog will surprise you. Rather, discover an unprecendented offers of luxury properties. Our
+    catalog will surprise you. Rather, discover an unprecendented offers of luxury properties.</p>
+  <a class="intro-link" href="{% url 'main:properties'%}">Explore Properties</a>
+</article>
+<div class="filters {% if 'mode' in request.COOKIES %} dark-filters {% endif %}">
+  <div class="filter emerald">
+    <span class="material-symbols-outlined emerald">home</span>
+    <span>All</span>
+  </div>
+  <div class="filter amber">
+    <span class="material-symbols-outlined">factory</span><span>Properties</span>
+  </div>
+  <div class="filter rose">
+    <span class="material-symbols-outlined rose">local_hotel</span>
+    <span>Hotel</span>
+  </div>
+  <div class="filter sapphire">
+    <span class="material-symbols-outlined">villa</span><span>villa</span>
+  </div>
+</div>
+{% endblock %}
