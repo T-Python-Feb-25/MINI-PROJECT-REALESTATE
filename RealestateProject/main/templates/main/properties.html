@@ -1,0 +1,40 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+<link href="/static/css/style.css" rel="stylesheet" />
+
+
+{% block content %}
+
+<h1>OUR PROPERTIES</h1>
+<div class="properties-gallery">
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa1.jpg' %}" alt="Villa Modern in Malqa" />
+            <h2>Villa Modern in Malqa</h2>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa2.jpg' %}" alt="Great Home for You in Rimal" />
+            <h2>Great Home for You in Rimal</h2>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa3.jpg' %}" alt="Luxury Villa in Riyadh" />
+            <h2>Luxury Villa in Riyadh</h2>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+    <div class="property-item">
+        <div class="property-box">
+            <img src="{% static 'images/villa4.jpg' %}" alt="Elegant Villa in Jeddah" />
+            <h2>Elegant Villa in Jeddah</h2>
+            <a href="#" class="btn-more">More</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
