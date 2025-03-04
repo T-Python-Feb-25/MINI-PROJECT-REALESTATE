@@ -1,11 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>TEst TEst Test </h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Real Estate - Find Your Dream Home{% endblock %}
+
+{% block content %}
+<div class="container home">
+    <section class="hero">
+        <h1 class="hero-title">FIND YOUR DREAMS</h1>
+        <p class="hero-text">Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+        <a href="{% url 'properties_view' %}" class="cta-button">Explolre Properties</a>
+    </section>
+    
+    <div class="property-categories">
+        <a href="#" class="category">
+            <div class="category-icon">🏠</div>
+            <span>ALL</span>
+        </a>
+        <a href="{% url 'properties_view' %}" class="category">
+            <div class="category-icon properties-icon">📅</div>
+            <span>PROPERTIES</span>
+        </a>
+        <a href="#" class="category">
+            <div class="category-icon hotel-icon">🛏️</div>
+            <span>HOTEL</span>
+        </a>
+        <a href="#" class="category">
+            <div class="category-icon villa-icon">🏘️</div>
+            <span>VILLA</span>
+        </a>
+    </div>
+</div>
+{% endblock %}

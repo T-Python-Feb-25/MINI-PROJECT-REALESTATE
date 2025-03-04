@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Our Properties{% endblock %}
+{%block page%}properties{%endblock%}
+{% block content %}
+<div class="container">
+    <section class="properties-section">
+        <h2>OUR PROPERTIES</h2>
+        <div class="properties-grid">
+            <div class="property-card">
+                <img src="\static\images\{{image1}}" alt="image 1" class="property-image">
+                <div class="property-info">
+                    <h3 class="property-title">{{title1}}</h3>
+                    <a href="#" class="more-button">more</a>
+                </div> 
+            </div>
+            
+            <div class="property-card">
+                <img src="\static\images\{{image2}}" alt="image 2" class="property-image">
+                <div class="property-info">
+                    <h3 class="property-title">{{title2}}</h3>
+                    <a href="#" class="more-button">more</a>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <img src="\static\images\{{image3}}" alt="image 3" class="property-image">
+                <div class="property-info">
+                    <h3 class="property-title">{{title3}}</h3>
+                    <a href="#" class="more-button">more</a>
+                </div>
+            </div>
+            
+            <div class="property-card">
+                <img src="\static\images\{{image4}}" alt="image 4" class="property-image">
+                <div class="property-info">
+                    <h3 class="property-title">{{title4}}</h3>
+                    <a href="#" class="more-button">more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}

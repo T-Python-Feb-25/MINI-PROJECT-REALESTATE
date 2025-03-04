@@ -1,0 +1,40 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>{% block title %}Real Estate{% endblock %}</title>
+
+</head>
+<body class="{% if request.COOKIES.dark_mode == 'true' %}dark-mode{% else %}light-mode{% endif %} {% block page %}{% endblock %}">
+    <header>
+        <div class="container nav-container">
+            <a href="{% url 'home_view' %}" class="logo">HOME</a>
+            <div class="main-nav">
+                <a href="{% url 'home_view' %}">Home</a>
+                <a href="{% url 'properties_view' %}">Properties</a>
+                <a href="#">Services</a>
+                <a href="#">About</a>
+                <a href="{% url 'contact_view' %}">Contact</a>
+            </div>
+            <div class="nav-buttons">
+                <a href="#" class="signup">Sign up</a>
+                <form method="post" action="{% url 'theme_mode_view' %}">
+                    {% csrf_token %}
+                    <button type="submit" class="theme">
+                        {% if request.COOKIES.dark_mode == 'True' %}☀️{% else %}🌙{% endif %}
+                    </button>
+                </form>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main base">
+        {% block content %}{% endblock %}
+    </main>
+    
+
+</body>
+</html>
