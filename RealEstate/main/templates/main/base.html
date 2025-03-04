@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" {% if 'mode' in request.COOKIES %} class="dark" {%endif%}>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0"> 
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+        <link rel="stylesheet" href="{%static 'css/style.css'%}"/>
+        <title> {%block title%}{%endblock%} </title>
+    </head>
+    <body class="{%block body-img%} {%endblock%}{% if 'mode' in request.COOKIES %}dark {%endif%}">
+        <div class="wrapper">
+            <header>
+                <h1 class="logo">HOME</h1>
+
+                
+                <nav class="top-nav">
+                    <a href="{%url 'main:home_view'%}">Home</a> 
+                    <a href="{%url 'main:properties_view'%}">Properties</a>
+                    <a href="#">Services</a> 
+                    <a href="#">About</a>
+                    <a href="{%url 'main:contact_view'%}">Contact</a>
+    
+                </nav>
+                <nav class="right-nav">
+                    <a href="#"><span class="material-symbols-outlined">person</span></a>
+                    <a href="#">Sign up</a> 
+                    <a href="{%url 'main:light_mode_view'%}" class="{%if not 'mode' in request.COOKIES%}active{%endif%}"><span class="material-symbols-outlined" >light_mode</span></a>
+                    <a href="{%url 'main:dark_mode_view'%}" class="{%if 'mode' in request.COOKIES%}active{%endif%}"><span class="material-symbols-outlined">dark_mode</span></a>
+
+                </nav>
+    
+   
+            </header>
+            <main>
+                {%block content%}
+
+                {%endblock%} 
+            </main>
+        </div>
+        <footer>
+            <p> Real Estate International All Rights Reserved 2025 </p>
+        </footer>
+
+
+    </body>
+
+</html>

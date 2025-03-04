@@ -1,0 +1,45 @@
+{%extends 'main/base.html'%}
+{%load static%}
+
+{%block title%}
+Home
+{%endblock%}
+{%block body-img%}
+home-bacground
+{%endblock%}
+
+{%block content%}
+<section class="home-content">
+    <h1 class="title">Find your dreams</h1>
+    <p>Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties. Our catalog will surprise you. Rather, discover an unprecedented offers of luxury properties.</p>
+    <a href="{%url 'main:properties_view'%}" class ="btn">Explore Properities</a>
+</section>
+<section class="buttom-nav">
+    <div class="first-element">
+        <span class="material-symbols-outlined">
+            house
+        </span>
+        <a href="#">All</a> 
+    </div>    
+    <div class="sec-element">
+        <span class="material-symbols-outlined">
+            factory
+        </span>
+        <a href="#">Properties</a>
+    </div>
+    <div class="third-element">
+        <span class="material-symbols-outlined">
+            hotel
+        </span>
+        <a href="#">Hotel</a> 
+    </div>    
+    <div class="fourth-element">
+        <span class="material-symbols-outlined">
+            villa
+        </span>
+        <a href="#">Vila</a>
+    </div>
+</section>
+  
+
+{%endblock%}
